@@ -1,4 +1,10 @@
-<h2 id="title">Welcome to Movie-Blog!!1!</h2>
-{{#link-to 'index'}}Home{{/link-to}} | {{#link-to 'reviews'}}Movie Reviews{{/link-to}} | {{#link-to 'coming-soon'}}Coming Soon{{/link-to}}
-
-{{outlet}}
+<nav>
+    <ul>
+        <li>{{#link-to "index"}}Index{{/link-to}}</li>
+        <li>{{#link-to "reviews"}}Reviews{{/link-to}}</li>
+        <li>{{#link-to "coming-soon"}}Coming Soon...{{/link-to}}</li>
+    </ul>
+</nav>
+<div class="container">
+{{liquid-outlet}}
+</div>

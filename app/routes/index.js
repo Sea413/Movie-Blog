@@ -12,6 +12,19 @@ export default Ember.Route.extend({
       this.transitionTo('index');
     },
 
+  update(blog, params) {
+    Object.keys(params).forEach(function(key) {
+      if(params[key]!==undefined) {
+        blog.set(key,params[key]);
+      }
+    });
+      blog.save();
+      this.transitionTo('index');
+    },
+    zipLookup(params) {
+      this.transitionTo('trailer', params.zip)
+    },
+
     destroyBlog(blog) {
       blog.destroyRecord();
       this.transitionTo('index');

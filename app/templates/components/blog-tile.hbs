@@ -1,7 +1,8 @@
-<li>{{blog.author}}'s {{blog.title}} on {{blog.date}}
-    {{#if isImageShowing }}
-      <p><img src={{blog.image}} alt={{blog.type}} {{action 'imageHide'}}></p>
-     {{else}}
-       <button {{action 'imageShow'}}>Show image</button>
-    {{/if}}
+<li>{{blog.title}}'s {{blog.author}} in {{blog.date}}
+  {{#if isImageShowing}}
+    <p><img src={{blog.image}} alt={{blog.author}} {{action 'imageHide'}}></p>
+  {{else}}
+    <button {{action 'imageShow'}}>Image</button>
+  {{/if}}
+  <button {{action 'delete' blog}}>Delete</button>
 </li>

@@ -11,13 +11,19 @@ export default Ember.Component.extend({
     imageHide: function() {
       this.set('isImageShowing', false);
     },
-    update(post, params) {
-      console.log(post);
-      this.sendAction('update', post, params);
+    zipLookup() {
+      var params = {
+        zip: this.get('zip')
+      };
+      this.sendAction('zipLookup', params);
     },
-    delete(post) {
-      if (confirm('Are you sure you want to delete this post?')) {
-            this.sendAction('destroyBrother', post);
+    update(blog, params) {
+      console.log(blog);
+      this.sendAction('update', blog, params);
+    },
+    delete(blog) {
+      if (confirm('Are you sure you want to delete this blog?')) {
+            this.sendAction('destroyBlog', blog);
       }
     }
   }

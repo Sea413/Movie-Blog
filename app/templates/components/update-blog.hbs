@@ -1,0 +1,37 @@
+{{#if updateBlogForm}}
+  <h4>Update {{blog.title}}'s {{blog.author}}</h4>
+    <div>
+      <form>
+        <div class="form-group">
+          <label for="title">Owner</label>
+          {{input value=title id="title" placeholder=blog.title}}
+        </div>
+
+        <div class="form-group">
+          <label for="author">Type</label>
+          {{input value=author id="author" placeholder=blog.author}}
+        </div>
+
+        <div class="form-group">
+          <label for="date">City</label>
+          {{input value=date id="date" placeholder=blog.date}}
+        </div>
+
+        <div class="form-group">
+          <label for="body">Number of Bedrooms</label>
+          {{input value=body id="body" placeholder=blog.body}}
+        </div>
+
+        <div class="form-group">
+          <label for="image">Image URL</label>
+          {{input value=image id="image" placeholder=blog.image}}
+        </div>
+
+        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"{{action 'update' blog}}>Save</button>
+        <!-- Accent-colored raised button with ripple -->
+
+      </form>
+    </div>
+{{else}}
+    <button {{action 'updateBlogForm'}}>Update</button>
+{{/if}}

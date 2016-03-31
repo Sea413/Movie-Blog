@@ -1,5 +1,5 @@
 {{#if addNewBlog}}
-  <h1>New Blog</h1>
+  <h2>New Blog</h2>
     <div>
       <form>
         <div class="form-group">
@@ -27,9 +27,11 @@
           {{input value=image id="image"}}
         </div>
 
-        <button {{action 'save1'}}>Save</button>
+        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" {{action 'save1'}}>Save</button>
       </form>
     </div>
 {{else}}
-    <button {{action 'blogFormShow'}}>New Blog</button>
+    <button class="mdl-button mdl-js-button mdl-button--colored" {{action 'blogFormShow'}}>New Blog</button>
 {{/if}}
+
+<!-- Colored FAB button -->
